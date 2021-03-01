@@ -35,7 +35,6 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
 
           # Build everything
