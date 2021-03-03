@@ -49,8 +49,6 @@ jobs:
       - name: Publish
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            a3innuva.Importia.Validations*
-            !a3innuva.Importia.Validations.sln
+          files: a3innuva.Importia.Validations.Console*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
