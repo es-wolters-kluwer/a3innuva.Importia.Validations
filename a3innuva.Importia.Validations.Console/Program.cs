@@ -1,4 +1,4 @@
-﻿namespace a3innuva.Migration.Validation
+﻿namespace a3innuva.Importia.Validations.Console
 {
     using System;
     using System.IO;
@@ -6,35 +6,24 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    using System.Windows;
     using a3innuva.TAA.Migration.SDK.Extensions;
     using a3innuva.TAA.Migration.SDK.Interfaces;
     using a3innuva.TAA.Migration.SDK.Serialization;
-    using Microsoft.Win32;
     using Newtonsoft.Json;
 
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public class Program
     {
-        public MainWindow()
+        public static async Task Main(string[] args)
         {
-            InitializeComponent();
+            string path = args[0];
+
+            Stream stream = File.OpenRead(path);
+            var text = await ValidateFile(stream, path);
+
+            Console.WriteLine(text);
         }
 
-        private async void btnOpenFile_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                Stream stream = File.OpenRead(openFileDialog.FileName);
-                resultView.Text = await this.ValidateFile(stream, openFileDialog.FileName);
-            }
-                
-        }
-
-        private async Task<string> ValidateFile(Stream stream, string fileName)
+        private static async Task<string> ValidateFile(Stream stream, string fileName)
         {
             string text;
 
@@ -42,7 +31,7 @@
             {
                 StringBuilder sb = new StringBuilder();
 
-                Stream streamToRead = fileName.Contains(".zip") ? await this.UnZipStreamAsync(stream) : stream;
+                Stream streamToRead = fileName.Contains(".zip") ? await UnZipStreamAsync(stream) : stream;
 
                 using (StreamReader reader = new StreamReader(streamToRead, Encoding.UTF8))
                 {
@@ -77,7 +66,7 @@
             return text;
         }
 
-        private async Task<Stream> UnZipStreamAsync(Stream input)
+        private static async Task<Stream> UnZipStreamAsync(Stream input)
         {
             using var zip = new ZipArchive(input, ZipArchiveMode.Read);
             if (!zip.Entries.Any())

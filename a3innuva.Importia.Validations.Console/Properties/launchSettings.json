@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "a3innuva.Importia.Validations.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Innuva\\D95753067_2020_Expedidas_2020_001.zip"
+    }
+  }
+}
