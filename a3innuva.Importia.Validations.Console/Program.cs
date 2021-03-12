@@ -25,21 +25,23 @@
 
         private static async Task<string> ValidateFile(Stream stream, string fileName)
         {
-            string text;
-
             try
             {
+                string json;
                 StringBuilder sb = new StringBuilder();
 
                 Stream streamToRead = fileName.Contains(".zip") ? await UnZipStreamAsync(stream) : stream;
 
                 using (StreamReader reader = new StreamReader(streamToRead, Encoding.UTF8))
                 {
-                    text = await reader.ReadToEndAsync();
+                    json = await reader.ReadToEndAsync();
                 }
-            
 
-                IMigrationSet set = JsonConvert.DeserializeObject<IMigrationSet>(text, JsonSerializationSettingsUtils.GetSettings());
+                var settings = JsonSerializationSettingsUtils.GetSettings();
+                settings.SerializationBinder = new ValidationBinder();
+
+                IMigrationSet set =
+                    JsonConvert.DeserializeObject<IMigrationSet>(json, settings);
 
                 var result = set.IsValid();
 
@@ -60,10 +62,9 @@
             }
             catch (Exception e)
             {
-                text = e.Message;
+                Console.WriteLine(e.InnerException?.Message ?? e.Message);
+                return e.InnerException?.Message ?? e.Message;
             }
-
-            return text;
         }
 
         private static async Task<Stream> UnZipStreamAsync(Stream input)
