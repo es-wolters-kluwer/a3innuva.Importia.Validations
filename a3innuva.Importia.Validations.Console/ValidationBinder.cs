@@ -18,11 +18,15 @@
             typeof(a3innuva.TAA.Migration.SDK.Implementations.MigrationSet),
             typeof(a3innuva.TAA.Migration.SDK.Implementations.OutputInvoice),
             typeof(a3innuva.TAA.Migration.SDK.Implementations.OutputInvoiceLine),
+            typeof(a3innuva.TAA.Migration.SDK.Implementations.Payment),
+            typeof(a3innuva.TAA.Migration.SDK.Implementations.Charge),
 
             typeof(a3innuva.TAA.Migration.SDK.Interfaces.IMigrationEntity[]),
             typeof(a3innuva.TAA.Migration.SDK.Interfaces.IInputInvoiceLine[]),
             typeof(a3innuva.TAA.Migration.SDK.Interfaces.IJournalLine[]),
-            typeof(a3innuva.TAA.Migration.SDK.Interfaces.IOutputInvoiceLine[])
+            typeof(a3innuva.TAA.Migration.SDK.Interfaces.IOutputInvoiceLine[]),
+            typeof(a3innuva.TAA.Migration.SDK.Interfaces.ICharge[]),
+            typeof(a3innuva.TAA.Migration.SDK.Interfaces.IPayment[])
         };
 
         public Type BindToType(string assemblyName, string typeName)
