@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="a3innuva.Importia.SDK.Extensions" Version="2.9.0" />
-    <PackageReference Include="a3innuva.Importia.SDK.Serialization" Version="2.9.0" />
+    <PackageReference Include="a3innuva.Importia.SDK.Serialization" Version="2.10.0" />
   </ItemGroup>
 
 </Project>
