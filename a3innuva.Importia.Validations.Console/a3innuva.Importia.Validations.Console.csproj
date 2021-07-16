@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="a3innuva.Importia.SDK.Extensions" Version="2.11.2" />
-    <PackageReference Include="a3innuva.Importia.SDK.Serialization" Version="2.11.2" />
+    <PackageReference Include="a3innuva.Importia.SDK.Extensions" Version="2.11.3" />
+    <PackageReference Include="a3innuva.Importia.SDK.Serialization" Version="2.11.3" />
   </ItemGroup>
 
 </Project>
