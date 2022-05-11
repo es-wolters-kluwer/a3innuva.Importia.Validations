@@ -38,7 +38,6 @@
                 }
 
                 var settings = JsonSerializationSettingsUtils.GetSettings();
-                settings.SerializationBinder = new ValidationBinder();
 
                 IMigrationSet set =
                     JsonConvert.DeserializeObject<IMigrationSet>(json, settings);
