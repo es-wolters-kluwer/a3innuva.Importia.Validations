@@ -2,7 +2,7 @@
   "profiles": {
     "a3innuva.Importia.Validations.Console": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Innuva\\D95753067_2020_Expedidas_2020_001.zip"
+      "commandLineArgs": "\"$(TargetDir)\\Sources\\Innuva\\B14158935_Facturas_Expedidas_2025_001.zip\""
     }
   }
 }

@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Sources\Innuva\B14158935_Facturas_Expedidas_2025_001.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sources\Innuva\B14158935_Facturas_Expedidas_2025_001.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="a3innuva.Importia.SDK.Extensions" Version="2.43.0" />
     <PackageReference Include="a3innuva.Importia.SDK.Serialization" Version="2.43.0" />
   </ItemGroup>
