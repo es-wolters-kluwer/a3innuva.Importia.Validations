@@ -51,9 +51,14 @@
 
                 if (result.errors.Any())
                 {
+                    var idsByLine = set.Entities
+                        .GroupBy(e => e.Line)
+                        .ToDictionary(g => g.Key, g => string.Join(", ", g.Select(e => e.Id)));
+
                     foreach (var item in result.errors)
                     {
-                        sb.AppendLine($"Línea : {item.Line} - {item.Code}");
+                        var id = idsByLine.TryGetValue(item.Line, out var found) ? found : "desconocido";
+                        sb.AppendLine($"Línea : {item.Line} - Id: {id} - {item.Code}");
                     }
                 }
 

@@ -1,0 +1,172 @@
+{
+  "$type": "a3innuva.TAA.Migration.SDK.Implementations.MigrationSet, a3innuva.TAA.Migration.SDK.Implementations",
+  "Info": {
+    "$type": "a3innuva.TAA.Migration.SDK.Implementations.MigrationInfo, a3innuva.TAA.Migration.SDK.Implementations",
+    "VatNumber": "12345678-Z",
+    "Year": 0,
+    "Type": 2,
+    "Origin": 10,
+    "FileName": "example.json",
+    "Version": "2.0"
+  },
+  "Entities": {
+    "$type": "a3innuva.TAA.Migration.SDK.Interfaces.IMigrationEntity[], a3innuva.TAA.Migration.SDK.Interfaces",
+    "$values": [
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000001",
+        "Description": "Cuenta cliente",
+        "Name": "Cliente 431",
+        "VatNumber": "53090985Q",
+        "PostalCode": "08221",
+        "Id": "130039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 1,
+        "Identity": "43000001",
+        "Source": "eco",
+		"CountryCode": "ES"
+      },
+	  {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000002",
+        "Description": "Cuenta cliente pais formato",
+        "Name": "Cliente 432",
+        "VatNumber": "53090985Q",
+        "PostalCode": "08221",
+        "Id": "230039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 2,
+        "Identity": "43000001",
+        "Source": "eco",
+		"CountryCode": "ESS"
+      },
+	  	  {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000003",
+        "Description": "Cuenta cliente pais erroneo",
+        "Name": "Cliente 433",
+        "VatNumber": "53090985Q",
+        "PostalCode": "08221",
+        "Id": "330039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 3,
+        "Identity": "43000001",
+        "Source": "eco",
+		"CountryCode": "FR"
+      },
+	  {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000004",
+        "Description": "Cuenta cliente sin pais",
+        "Name": "Cliente 434",
+        "VatNumber": "53090985Q",
+        "PostalCode": "08221",
+        "Id": "430039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 4,
+        "Identity": "43000001",
+        "Source": "eco"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000005",
+        "Description": "NIF valido",
+        "Name": "Cliente 435",
+        "VatNumber": "12345678Z",
+        "PostalCode": "08221",
+        "Id": "530039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 5,
+        "Identity": "43000005",
+        "Source": "eco",
+        "CountryCode": "ES"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000006",
+        "Description": "NIF erroneo (formato)",
+        "Name": "Cliente 436",
+        "VatNumber": "12345678-Z",
+        "PostalCode": "08221",
+        "Id": "630039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 6,
+        "Identity": "43000006",
+        "Source": "eco",
+        "CountryCode": "ES"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000007",
+        "Description": "CIF valido",
+        "Name": "Cliente 437",
+        "VatNumber": "A58818501",
+        "PostalCode": "08221",
+        "Id": "730039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 7,
+        "Identity": "43000007",
+        "Source": "eco",
+        "CountryCode": "ES"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000008",
+        "Description": "CIF con pais distinto de ES",
+        "Name": "Cliente 438",
+        "VatNumber": "A58818501",
+        "PostalCode": "08221",
+        "Id": "830039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 8,
+        "Identity": "43000008",
+        "Source": "eco",
+        "CountryCode": "FR"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000009",
+        "Description": "NIE valido",
+        "Name": "Cliente 439",
+        "VatNumber": "X1234567L",
+        "PostalCode": "08221",
+        "Id": "930039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 9,
+        "Identity": "43000009",
+        "Source": "eco",
+        "CountryCode": "ES"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000010",
+        "Description": "NIE erroneo (minusculas)",
+        "Name": "Cliente 440",
+        "VatNumber": "x1234567l",
+        "PostalCode": "08221",
+        "Id": "a30039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 10,
+        "Identity": "43000010",
+        "Source": "eco",
+        "CountryCode": "ES"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000011",
+        "Description": "NIF intracomunitario valido",
+        "Name": "Cliente 441",
+        "VatNumber": "FR40303265045",
+        "PostalCode": "75001",
+        "Id": "b30039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 11,
+        "Identity": "43000011",
+        "Source": "eco",
+        "CountryCode": "FR"
+      },
+      {
+        "$type": "a3innuva.TAA.Migration.SDK.Implementations.Account, a3innuva.TAA.Migration.SDK.Implementations",
+        "Code": "43000012",
+        "Description": "NIF intracomunitario con pais no coincidente",
+        "Name": "Cliente 442",
+        "VatNumber": "FR40303265045",
+        "PostalCode": "75001",
+        "Id": "c30039ed-e686-4bb8-8b9d-38aa053f5455",
+        "Line": 12,
+        "Identity": "43000012",
+        "Source": "eco",
+        "CountryCode": "DE"
+      }
+    ]
+  }
+}
